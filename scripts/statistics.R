@@ -1,6 +1,6 @@
 # Set working directory
 setwd("C:/Users/ni82xoj/Desktop/StaMPS_Visualizer-master/input/stusi")
-# Read in CSV reformatted file
+# Read reformatted CSV file
 r <- read.csv("PS_points_ts_R.csv", sep=",", dec=".")
 
 #### SECTION 1: TO ANALYZE A SPECIFIC PARAMETER FOR ALL PS POINTS (COLUMNS), PROCEED HERE! ####
