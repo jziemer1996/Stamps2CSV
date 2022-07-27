@@ -2,8 +2,7 @@
 
 StaMPS (Stanford Method for Persistent Scatterers) is a software package that allows to extract ground displacements from time series of synthetic aperture radar (SAR) acquisitions (https://github.com/dbekaert/StaMPS). Since statistical analyses (deformation mean, median, standard deviation etc.) of PS points in a timeseries are not possible within the Stamps Visualizer (https://github.com/thho/StaMPS_Visualizer) itself, the analysis has to be done manually. 
 
-This package serves for the conversion of StaMPS Visualizer output CSVs into analysis-ready data for the use in RStudio.    
-For further information on the working steps see the documentation below. 
+This package serves for the conversion of StaMPS Visualizer output CSVs into analysis-ready data for the use in RStudio. For further information on the working steps see the documentation below. 
 
 1) The *analysis.py* script converts the input CSV into a standard R-readable CSV file of rows and columns, in which every 
 row corresponds to a PS point with an ID, x coordinate, y coordinate, the deformation trend over 
