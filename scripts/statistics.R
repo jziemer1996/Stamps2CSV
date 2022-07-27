@@ -1,3 +1,4 @@
+# Set working directory
 setwd("C:/Users/ni82xoj/Desktop/StaMPS_Visualizer-master/input/stusi")
 r <- read.csv("PS_points_ts_R.csv", sep=",", dec=".")
 
