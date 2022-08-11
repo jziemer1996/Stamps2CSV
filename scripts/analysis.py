@@ -5,11 +5,11 @@ import os
 ## Analysis-ready RStudio CSV format ##
 
 
-def columns(working_dir, stamps_csv, output_csv):
+def columns(working_dir, output_dir, stamps_csv, output_csv):
     with open(working_dir + stamps_csv, 'r') as file:
         reader = csv.reader(file)
         n = 1
-        with open(working_dir + output_csv, 'w',
+        with open(output_dir + output_csv, 'w',
                   newline='') as f:
             # You need to add every single deformation value of an PS as a new list element
             # example header = ['ID', 'Lat', 'Lon', 'Trend (mm/y)', 'Deformation X in mm at date yyyymmdd']
@@ -35,9 +35,9 @@ def columns(working_dir, stamps_csv, output_csv):
                 writer.writerow(PS_point)
 
     # Delete the not useful lines mentioned above to get a nice cleaned CSV file
-    with open(working_dir + output_csv) as rf, open(working_dir + output_csv + ".temp", "w") as wf:
+    with open(output_dir + output_csv) as rf, open(output_dir + output_csv + ".temp", "w") as wf:
         for i, line in enumerate(rf):
             if i != 1 and i != 2:  # Everything but the second and third line
                 wf.write(line)
 
-    os.replace(working_dir + output_csv + ".temp", working_dir + output_csv)
+    os.replace(output_dir + output_csv + ".temp", output_dir + output_csv)
