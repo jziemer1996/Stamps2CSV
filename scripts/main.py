@@ -1,4 +1,5 @@
 import analysis
+import os
 
 
 def main():
@@ -9,6 +10,8 @@ def main():
     stamps_csv = "stamps_tsexport_moehnesubset_5m.csv"
     output_csv = "PS_points_ts_moehnesubset_5m_R.csv"
 
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
     # Executable function
     analysis.columns(working_dir, output_dir, stamps_csv, output_csv)
 
