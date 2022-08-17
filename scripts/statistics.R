@@ -1,13 +1,18 @@
 # Set working directory
-setwd("C:/Users/ni82xoj/Desktop/StaMPS_Visualizer-master/input/stusi")
+#setwd("C:/Users/ni82xoj/Desktop/StaMPS_Visualizer-master/input/stusi")
+setwd("C:/Users/ni82xoj/Desktop/KI4KI/Daten/Moehne/CSV")
 # Read reformatted CSV file
-r <- read.csv("PS_points_ts_R.csv", sep=",", dec=".")
+orig <- read.csv("PS_points_ts_moehnesubset_5m_orig_selected.csv", sep=",", dec=".")
+cle1 <- read.csv("PS_points_ts_moehnesubset_5m_Cle1_selected.csv", sep=",", dec=".")
+cle2 <- read.csv("PS_points_ts_moehnesubset_5m_Cle2_selected.csv", sep=",", dec=".")
+cle3 <- read.csv("PS_points_ts_moehnesubset_5m_Cle3_selected.csv", sep=",", dec=".")
+cle4 <- read.csv("PS_points_ts_moehnesubset_5m_Cle4_selected.csv", sep=",", dec=".")
 
 #### SECTION 1: TO ANALYZE A SPECIFIC PARAMETER FOR ALL PS POINTS (COLUMNS), PROCEED HERE! ####
 
 #### SECTION 2: TO ANALYZE A ALL PARAMETERS FOR A SPECIFIC PS POINT OVER TIME (ROWS), PROCEED HERE! ####
 # Read the CSV table as rows, select number of rows to be read (n = ...)
-rows <- readLines(paste("PS_points_ts_R.csv", sep = ""),
+rows <- readLines(paste("PS_points_ts_moehnesubset_5m_orig_selected.csv", sep = ""),
                   n = 2)
 
 ### Select a specific PS point ###
