@@ -8,14 +8,14 @@ def columns(working_dir, output_dir, stamps_csv, output_csv):
         # Open output_csv in write mode
         scenes = int(input("How long is the timeseries you want to convert (number of processed scenes)? "))
         with open(output_dir + output_csv, 'w', newline='') as f:
-            header = ['ID', 'Lat', 'Lon', 'Coh', 'Var', 'Trend'] + [f"Def_{i}" for i in range(1, scenes+1)]
+            header = ['ID', 'Lat', 'Lon', 'Height', 'Coh', 'Var', 'Trend'] + [f"Def_{i}" for i in range(1, scenes+1)]
             print(header)
             writer = csv.writer(f)
             writer.writerow(header)
             id = -2
             for row in reader:
                 id += 1
-                row = [id] + row[:5] + row[5:]
+                row = [id] + row[:6] + row[6:]
                 writer.writerow(row)
 
     # Clean up output_csv
